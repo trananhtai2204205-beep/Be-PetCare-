@@ -42,6 +42,20 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+        'bac_si' => [
+            'driver' => 'session',
+            'provider' => 'bac_sis',
+        ],
+        'le_tan' => [
+            'driver' => 'session',
+            'provider' => 'le_tans',
+        ],
+
+
     ],
 
     /*
@@ -65,6 +79,18 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', User::class),
+        ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => \App\Models\Admin::class
+        ],
+        'bac_sis' => [
+            'driver' => 'eloquent',
+            'model' => \App\Models\BacSi::class
+        ],
+        'le_tans' => [
+            'driver' => 'eloquent',
+            'model' => \App\Models\LeTan::class
         ],
 
         // 'users' => [
